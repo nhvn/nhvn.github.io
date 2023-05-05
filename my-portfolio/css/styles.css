@@ -1,19 +1,144 @@
-body {
-    font-family: Arial, sans-serif;
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Global styles */
+* {
+    box-sizing: border-box;
 }
 
+body {
+    font-family:'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: url('../img/background.jpg') no-repeat center center fixed; 
+    background-size: cover;
+}
+
+/* Header */
 header {
+    text-align: left;
+}
+
+.head-hello {
+    /* color: #5f899c; */
+}
+
+.head-name {
+    font-size: 50px;
+}
+
+.head-hello p, .head-name h1 {
+    margin: 0;
+}
+
+header::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+  }
+  
+  .social-icons a {
+    display: inline-block;
+    margin-right: 20px;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .social-icons a:hover {
+    color: #598c4b; /* Change the color on hover */
+  }  
+
+/* Main content */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 50px;
+    background-color: rgba(255, 255, 255, 0); /* the 0 sets transparency */
+    overflow: auto;
+}
+
+main {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+}
+
+h2 {
+    border-bottom: 2px solid #f8f9fa;
+    padding-bottom: 10px;
+}
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:flex-start;
+}
+
+.project {
     background-color: #f8f9fa;
+    border-radius: 10px;
+    flex-basis: calc(33.333% - 20px);
+    margin-bottom: 20px;
+    margin-left: 10px;
+    padding: 20px;
+}
+
+.project h3 {
+    margin-top: 0;
+}
+
+.project a {
+    background-color: #007bff;
+    border-radius: 5px;
+    color: #fff;
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 10px;
+    text-decoration: none;
+}
+
+.project a:hover {
+    background-color: #0056b3;
+}
+
+/* Footer */
+footer {
     padding: 20px;
     text-align: center;
 }
 
-section {
-    margin: 20px 0;
+/* Responsive styles */
+@media screen and (max-width: 992px) {
+    .project {
+        flex-basis: calc(50% - 10px);
+    }
 }
 
-footer {
-    background-color: #f8f9fa;
-    padding: 10px;
-    text-align: center;
+/* Responsive styles */
+@media screen and (max-width: 992px) {
+    .project {
+        flex-basis: calc(50% - 10px);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .project {
+        flex-basis: 100%;
+    }
 }
