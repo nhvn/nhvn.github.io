@@ -11,7 +11,7 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background: url('../img/background.jpg') no-repeat center center fixed; 
+    background: url('../img/background2.jpg') no-repeat center center fixed; 
     background-size: cover;
 }
 
@@ -21,7 +21,8 @@ header {
 }
 
 .head-hello {
-    /* color: #5f899c; */
+    /* CHANGE COLOR LATER */
+    color: #000000; 
 }
 
 .head-name {
@@ -38,6 +39,7 @@ header::after {
     clear: both;
 }
 
+/* Social Icons */
 
 .social-icons {
     display: flex;
@@ -53,7 +55,23 @@ header::after {
   }
   
   .social-icons a:hover {
-    color: #598c4b; /* Change the color on hover */
+    color: #598c4b; 
+  }  
+
+  .social-icons2 {
+    display: flex;
+    align-items: center;
+  }
+  
+  .social-icons2 a {
+    display: inline-block;
+    margin-right: 20px;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .social-icons2 a:hover {
+    color: #598c4b; 
   }  
 
 /* Main content */
@@ -84,6 +102,9 @@ h2 {
     padding-bottom: 10px;
 }
 
+/* Project Cards */
+
+/* SEE WHAT IS NEEDED AND WHAT IS NOT */
 .projects {
     display: flex;
     flex-wrap: wrap;
@@ -97,6 +118,39 @@ h2 {
     margin-bottom: 20px;
     margin-left: 10px;
     padding: 20px;
+    position: relative;
+}
+
+.project:hover {
+    opacity: 1; /* show the content when the user hovers over the card */
+  }
+
+.project img {
+    max-width: 100%;
+    transition: transform 0.3s ease-in-out; 
+    opacity: 0.4;
+}
+
+.project:hover img {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+
+.project .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 0;
+}
+
+.project:hover {
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    transform: scale(0.9);
+    z-index: 1;
 }
 
 .project h3 {
@@ -104,18 +158,14 @@ h2 {
 }
 
 .project a {
-    background-color: #007bff;
     border-radius: 5px;
-    color: #fff;
+    color: #000000;
     display: inline-block;
     margin-top: 10px;
     padding: 5px 10px;
     text-decoration: none;
 }
-
-.project a:hover {
-    background-color: #0056b3;
-}
+  
 
 /* Footer */
 footer {
@@ -127,18 +177,5 @@ footer {
 @media screen and (max-width: 992px) {
     .project {
         flex-basis: calc(50% - 10px);
-    }
-}
-
-/* Responsive styles */
-@media screen and (max-width: 992px) {
-    .project {
-        flex-basis: calc(50% - 10px);
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .project {
-        flex-basis: 100%;
     }
 }
