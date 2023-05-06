@@ -4,6 +4,7 @@
 /* Global styles */
 * {
     box-sizing: border-box;
+    text-decoration: none; /* Used to remove lines under projects but could be more */
 }
 
 body {
@@ -15,34 +16,36 @@ body {
     color: black;
     transition: background-color 0.3s, color 0.3s;
     background-size: cover;
-  }
-  
-  .night-mode {
-    background-color: #222;
-    color: white;
-  }
-  
-  .night-mode nav {
-    background-color: #333;
-  }
-  
-  body.night-mode #backgroundOverlay {
-    background-color: rgba(0, 0, 0, 0.75);
-    /* background-color: #222; */
-  }
-  
-  #backgroundOverlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: -1;
-  }
+}
+.night-mode {
+background-color: #222;
+color: white;
+}
+
+.night-mode nav {
+background-color: #333;
+}
+
+body.night-mode #backgroundOverlay {
+background-color: rgba(0, 0, 0, 0.75);
+}
+
+#backgroundOverlay {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+pointer-events: none;
+z-index: -1;
+}
 
 p {
     color: #666; /* You can adjust the shade of grey by changing the hex value */
+}
+
+body.night-mode p {
+    color: #fff;
 }
 
 /* HEADER */
@@ -57,6 +60,10 @@ header {
     text-align: center;
 }
 
+body.night-mode .head-hello p {
+    color: rgba(255, 255, 255, 0.541) !important;
+  }
+
 .head-name {
     font-size: 50px;
     text-align: center;
@@ -70,6 +77,10 @@ header {
 .head-name-info p {
     color: #598c4b; /* dark matcha */
 }
+
+body.night-mode .head-name-info p {
+    color: #FFD700 !important;
+  }
 
 .head-hello p, .head-name h1 {
     margin: 0;
@@ -130,6 +141,18 @@ nav a::before {
     visibility: hidden;
 }
 
+nav.night-mode {
+    background-color: #333333;
+}
+
+nav.night-mode a {
+    color: #fff;
+}
+
+nav.night-mode a:hover {
+    color: #FFD700;
+}
+
 .night-mode-icon {
     cursor: pointer;
     font-size: 1.5em;
@@ -166,33 +189,69 @@ nav a::before {
     margin-bottom: 10px;
     font-size: 24px;
     color: #333;
+    transition: color 0.3s ease-in-out;
   }
   
   .social-icons a:hover {
     color: #74A12E;
-  }  
-
-  .social-icons2 {
-    display: flex;
-    align-items: center;
-  }
-  
-  .social-icons2 a {
-    display: inline-block;
-    margin-right: 20px;
-    font-size: 24px;
-    color: #333;
-  }
-  
-  .social-icons2 a:hover {
-    color: #598c4b; 
   }
   
   body.night-mode .social-icons,
-body.night-mode .social-icons2 a {
-  background-color: #444444;
-  color: #ffffff;
-}
+  body.night-mode .social-icons a {
+    background-color: #333333;
+    color: #ffffff;
+  }
+  
+  body.night-mode .social-icons a:hover {
+    color: #FFD700;
+  }
+  
+/* CONNECT BOXES */
+  .connect-box {
+    background-color: #fff;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .connect-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .connect-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 5px;
+    background-color: #666;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .connect-links a:hover {
+    background-color: #74a12e;
+  }
+  
+  .connect-links a i {
+    margin-right: 0.5rem;
+    font-size: 1.5rem;
+  }
+    
+  body.night-mode .connect-box {
+    background-color: #333;
+    color: #fff;
+  }
+
+  body.night-mode .connect-box a:hover {
+    background-color:#ffd900af;
+  }
 
 /* MAIN CONTENT */
 .container {
@@ -215,6 +274,7 @@ h1, h2, h3 {
 h2 {
     border-bottom: 2px solid #c9c9c9;
     padding-bottom: 10px;
+    text-align: center;
 }
 
 h3 {
@@ -267,7 +327,7 @@ body.night-mode #about {
   }
   
   body.night-mode #about h3 {
-    color: #74A12E;
+    color:#FFD700;
   }
 
 /* PROJECTS */
@@ -304,7 +364,34 @@ body.night-mode #about {
 
 .project:hover img {
     opacity: 1;
-  }
+}
+
+.project:hover {
+    transform: scale(1.1);
+    z-index: 1;
+    opacity: 1;
+    transition: transform 0.5s ease-in-out;
+}
+
+body.night-mode .project:hover {
+    background-color: rgb(99, 99, 99);
+}
+
+.project {
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    flex-basis: 100%;
+    margin-bottom: 20px;
+    padding: 20px;
+    position: relative;
+    width: 70%; /* Adjust this value to control the width of each project */
+    transition: transform 0.4s ease-out, box-shadow 0.4s ease-out, opacity 0.4s ease-in-out;
+    transform-origin: center;
+}
+
+.project:hover .overlay {
+    opacity: 0.5;
+}
 
 .project .overlay {
     position: absolute;
@@ -317,40 +404,26 @@ body.night-mode #about {
     z-index: 0;
 }
 
-.project:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    transform: scale(0.9);
-    z-index: 1;
-    opacity: 1;
-    transition: transform 0.5s ease-in-out;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.project h3 {
-    margin-top: 0;
-}
-
-.project a {
-    border-radius: 5px;
-    color: #000000;
-    display: inline-block;
-    margin-top: 10px;
-    padding: 5px 10px;
-    text-decoration: none;
-}
+body.night-mode #projects h3 {
+    color:#FFD700;
+  }
 
 body.night-mode #projects {
     background-color: #333333;
     color: #ffffff;
-  }
-  
-  body.night-mode .project {
+}
+
+body.night-mode .project {
     background-color: #444444;
-  }
-  
-  body.night-mode .project h3 {
-    color: #ffffff;
-  }
+}
+
+body.night-mode .project h3 {
+    color: #ffffff !important;
+}
+
+body.night-mode .project-info {
+    color: white;
+}
 
 /* Contact */
 #contact {
@@ -364,7 +437,7 @@ body.night-mode #contact {
   }
   
   body.night-mode #contact h3 {
-    color: #74A12E;
+    color:#FFD700;
   }
 
 /* Footer */
