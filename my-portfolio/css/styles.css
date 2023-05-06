@@ -11,22 +11,64 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background: url('../img/background2.jpg') no-repeat center center fixed; 
+    background: url('../img/background4.jpg') no-repeat center center fixed; 
+    color: black;
+    transition: background-color 0.3s, color 0.3s;
     background-size: cover;
+  }
+  
+  .night-mode {
+    background-color: #222;
+    color: white;
+  }
+  
+  .night-mode nav {
+    background-color: #333;
+  }
+  
+  body.night-mode #backgroundOverlay {
+    background-color: rgba(0, 0, 0, 0.75);
+    /* background-color: #222; */
+  }
+  
+  #backgroundOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+  }
+
+p {
+    color: #666; /* You can adjust the shade of grey by changing the hex value */
 }
 
-/* Header */
+/* HEADER */
 header {
     text-align: left;
+    padding-top: 28em;
+    padding-bottom: 32em;
 }
 
 .head-hello {
-    /* CHANGE COLOR LATER */
-    color: #000000; 
+    font-size: 30px; 
+    text-align: center;
 }
 
 .head-name {
     font-size: 50px;
+    text-align: center;
+}
+
+.head-name-info {
+    font-size: 20px;
+    text-align: center;
+}
+
+.head-name-info p {
+    color: #598c4b; /* dark matcha */
 }
 
 .head-hello p, .head-name h1 {
@@ -39,23 +81,95 @@ header::after {
     clear: both;
 }
 
-/* Social Icons */
+/* NAV BAR */
+nav {
+    background-color: #fff;
+    padding: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 95;
+}
 
+.nav-container {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    margin: 0 2rem;
+}
+
+nav a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+     color: #598c4b; /* dark matcha color */
+}
+
+nav a::before {
+    content: "";
+    display: block;
+    height: 100px; /* Adjust this value according to the height of your navigation bar */
+    margin-top: -100px; /* Use the same value as height but with a negative sign */
+    visibility: hidden;
+}
+
+.night-mode-icon {
+    cursor: pointer;
+    font-size: 1.5em;
+    color: #ccc;
+    transition: 2s;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 100;
+    padding-right: 2em;
+}
+
+.night-mode-icon.active {
+    color: #FFD700;
+}
+
+/* SOCIAL ICONS */
 .social-icons {
     display: flex;
-    align-items: center;
-    justify-content: right;
+    flex-direction: column;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color:#ffffff;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    z-index: 90;
   }
   
   .social-icons a {
     display: inline-block;
-    margin-right: 20px;
+    margin-bottom: 10px;
     font-size: 24px;
     color: #333;
   }
   
   .social-icons a:hover {
-    color: #598c4b; 
+    color: #74A12E;
   }  
 
   .social-icons2 {
@@ -72,11 +186,17 @@ header::after {
   
   .social-icons2 a:hover {
     color: #598c4b; 
-  }  
+  }
+  
+  body.night-mode .social-icons,
+body.night-mode .social-icons2 a {
+  background-color: #444444;
+  color: #ffffff;
+}
 
-/* Main content */
+/* MAIN CONTENT */
 .container {
-    max-width: 1000px;
+    /* max-width: 1000px; */
     margin: 0 auto;
     padding: 50px;
     background-color: rgba(255, 255, 255, 0); /* the 0 sets transparency */
@@ -98,27 +218,86 @@ h1, h2, h3 {
 }
 
 h2 {
-    border-bottom: 2px solid #f8f9fa;
+    border-bottom: 2px solid #000000;
     padding-bottom: 10px;
 }
 
-/* Project Cards */
+h3 {
+    color: #598c4b;
+}
 
-/* SEE WHAT IS NEEDED AND WHAT IS NOT */
-.projects {
+/* ABOUT ME */
+#about {
+    background-color: #ffffff; /* Light matcha color */
+    padding: 2rem; /* Add some padding for better appearance */
+}
+
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.get-to-know-me,
+.my-skills {
+    width: 48%; /* Adjust the width as needed */
+}
+
+.get-to-know-me h3,
+.my-skills h3 {
+    margin-top: 0;
+}
+
+.my-skills ul {
     display: flex;
     flex-wrap: wrap;
-    justify-content:flex-start;
+    list-style-type: none;
+    padding: 0;
+}
+
+.my-skills li {
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    color: #333;
+    font-weight: bold;
+    margin: 0.5rem;
+    padding: 0.5rem 1rem;
+    text-align: center;
+}
+
+body.night-mode #about {
+    background-color: #333333;
+    color: #ffffff;
+  }
+  
+  body.night-mode #about h3 {
+    color: #74A12E;
+  }
+
+/* PROJECTS */
+#projects {
+    padding: 2em;
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .project {
-    background-color: #f8f9fa;
+    background-color: rgb(255, 255, 255);
     border-radius: 10px;
-    flex-basis: calc(33.333% - 20px);
+    flex-basis: 100%;
     margin-bottom: 20px;
-    margin-left: 10px;
     padding: 20px;
     position: relative;
+    width: 80%; /* Adjust this value to control the width of each project */
+}
+
+.project h3 {
+    color: black;
 }
 
 .project:hover {
@@ -132,7 +311,6 @@ h2 {
 }
 
 .project:hover img {
-    transform: scale(1.2);
     opacity: 1;
   }
 
@@ -148,7 +326,7 @@ h2 {
 }
 
 .project:hover {
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     transform: scale(0.9);
     z-index: 1;
 }
@@ -165,7 +343,34 @@ h2 {
     padding: 5px 10px;
     text-decoration: none;
 }
+
+body.night-mode #projects {
+    background-color: #333333;
+    color: #ffffff;
+  }
   
+  body.night-mode .project {
+    background-color: #444444;
+  }
+  
+  body.night-mode .project h3 {
+    color: #ffffff;
+  }
+
+/* Contact */
+#contact {
+    background-color: #ffffff;
+    padding: 2rem;
+}
+
+body.night-mode #contact {
+    background-color: #333333;
+    color: #ffffff;
+  }
+  
+  body.night-mode #contact h3 {
+    color: #74A12E;
+  }
 
 /* Footer */
 footer {
