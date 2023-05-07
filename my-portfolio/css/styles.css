@@ -51,7 +51,7 @@ body.night-mode p {
 /* HEADER */
 header {
     text-align: left;
-    padding-top: 18em;
+    padding-top: 25em;
     padding-bottom: 32em;
 }
 
@@ -327,7 +327,9 @@ h3 {
     width: 50%;
     margin-right: auto;
     margin-left: 0;
-    min-width: 50%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 20px;
   }
   
 .about-content {
@@ -365,12 +367,15 @@ h3 {
   text-align: center;
 }
 
+.my-skills li:hover {
+  background-color:white;
+}
+
 .night-mode .my-skills li {
   filter: brightness(70%);
 }
   
-/* PICTURE MANUALLY PLACED */
-.my-pic { 
+.my-pic { /* PICTURE MANUALLY PLACED */
   width: 40%;
   margin-left: 10%;
   position: absolute;
@@ -380,18 +385,28 @@ h3 {
 }
 
 .my-pic img {
+  filter: brightness(90%);
   max-width: 25em;
   height: auto;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.87);
 }
+
+.my-pic:hover img {
+  filter: brightness(100%);
+  z-index: 1;
+  box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.87);
+}
   
 body.night-mode .my-pic {
-    filter: brightness(85%);
+    filter: brightness(90%);
 }
 
 body.night-mode #about {
   background-color: #333333;
   color: #ffffff;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  padding: 20px;
 }
 
 body.night-mode #about h3 {
@@ -479,6 +494,9 @@ body.night-mode #projects h3 {
 body.night-mode #projects {
     background-color: #333333;
     color: #ffffff;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 20px;
 }
 
 body.night-mode .project {
@@ -496,12 +514,17 @@ body.night-mode .project-info {
 /* Contact */
 #contact {
     background-color: #ffffff;
-    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 20px;
 }
 
 body.night-mode #contact {
     background-color: #333333;
     color: #ffffff;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 20px;
   }
   
   body.night-mode #contact h3 {
