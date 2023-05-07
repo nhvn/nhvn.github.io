@@ -235,7 +235,7 @@ nav.night-mode .nav-right .night-mode-icon:hover {
 
 .night-mode-prompt.show {
   display: flex; /* Show the prompt when the "show" class is added */
-  animation: fadeOut 3s linear 8s forwards; /* Set a fade-out animation */
+  animation: fadeOut 3s linear 3s forwards; /* Set a fade-out animation */
   opacity: .8;
 }
 
