@@ -63,7 +63,7 @@ $(document).ready(function() {
     nightModePrompt.classList.remove('show');
   });
 
-  // Set a timeout to hide the prompt after 3 seconds
+  // Set a timeout to hide the prompt
   setTimeout(() => {
     nightModePrompt.classList.remove('show');
   }, 10000);
