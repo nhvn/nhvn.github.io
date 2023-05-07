@@ -14,7 +14,7 @@ This is the repository for my personal website, built using HTML, CSS, and JavaS
 - HTML
 - CSS
 - JavaScript
-- Font Awesome icons
+- Font Awesome icons 
 
 ## Live Demo
 
