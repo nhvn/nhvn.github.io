@@ -11,20 +11,14 @@ $(document).ready(function() {
   const nightModePrompt = document.querySelector('.night-mode-prompt');
 
   // Night Mode
-  let nightModeButton = $('<i class="fas fa-moon night-mode-icon"></i>');
-  nightModeButton.click(function() {
+  nightModeToggle.click(function() {
     toggleNightMode();
   });
-  body.append(nightModeButton);
 
   function toggleNightMode() {
     nightModeElements.forEach(element => element.toggleClass("night-mode"));
-    nightModeButton.toggleClass("active");
+    nightModeToggle.toggleClass("active");
     localStorage.setItem("nightMode", body.hasClass("night-mode"));
-  }
-
-  if (localStorage.getItem("nightMode") === "true") {
-    toggleNightMode();
   }
 
   // Smooth scrolling
@@ -43,24 +37,46 @@ $(document).ready(function() {
   footerText.text(footerText.text() + ` | ${currentYear}`);
 
   // Animate name
-  headName.animate({
-    fontSize: "50px",
-    top: "+=50px"
-  }, 300, "swing", function() {
-    headName.animate({
-      fontSize: "40px",
-      top: "-=50px"
-    }, 500, "swing");
+  headName.css("opacity", 0).css("font-size", "50%");
+  headName.children().each(function(index) {
+    const letter = $(this);
+    letter.css({
+      opacity: 0,
+      left: '-50px'
+    });
+    letter.delay(150 * index).animate({
+      opacity: 1,
+      left: 0
+    }, 5000, "swing");
+    headName.delay(500).animate({ opacity: 1, "font-size": "50px" }, 1000, "swing");
   });
 
-// Show the prompt when the page loads
-window.addEventListener('load', () => {
+  // Add class to trigger CSS animation
+  headName.addClass("animate");
+
+  // Show the prompt when the page loads
   nightModePrompt.classList.add('show');
-});
 
-// Set a timeout to hide the prompt after 3 seconds
-setTimeout(() => {
-  nightModePrompt.classList.remove('show');
-}, 100000);
-});
+  // Add a click event listener to the prompt
+  nightModePrompt.addEventListener('click', () => {
+    // Remove the "show" class when the prompt is clicked
+    nightModePrompt.classList.remove('show');
+  });
 
+  // Set a timeout to hide the prompt after 3 seconds
+  setTimeout(() => {
+    nightModePrompt.classList.remove('show');
+  }, 10000);
+
+// Hide/show nav bar on scroll
+let prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  const currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.querySelector("nav").style.top = "0";
+  } else {
+    document.querySelector("nav").style.top = "-100px";
+  }
+  prevScrollpos = currentScrollPos;
+}
+});
