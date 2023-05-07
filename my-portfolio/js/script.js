@@ -8,6 +8,7 @@ $(document).ready(function() {
   const navLinks = $('nav a[href^="#"]');
   const footerText = $('footer p');
   const nightModeElements = [body, nav, socialIcons];
+  const nightModePrompt = document.querySelector('.night-mode-prompt');
 
   // Night Mode
   let nightModeButton = $('<i class="fas fa-moon night-mode-icon"></i>');
@@ -51,5 +52,15 @@ $(document).ready(function() {
       top: "-=50px"
     }, 500, "swing");
   });
+
+// Show the prompt when the page loads
+window.addEventListener('load', () => {
+  nightModePrompt.classList.add('show');
+});
+
+// Set a timeout to hide the prompt after 3 seconds
+setTimeout(() => {
+  nightModePrompt.classList.remove('show');
+}, 100000);
 });
 
