@@ -274,7 +274,7 @@ h1, h2, h3 {
 h2 {
     border-bottom: 2px solid #c9c9c9;
     padding-bottom: 10px;
-    text-align: center;
+    /* text-align: center; */
 }
 
 h3 {
@@ -282,35 +282,41 @@ h3 {
 }
 
 /* ABOUT ME */
-#about {
-    background-color: #ffffff; /* Light matcha color */
-    padding: 2rem; /* Add some padding for better appearance */
-}
 
-.about-content {
+#about {
+    background-color: #ffffff;
+    padding: 2rem; /* Add some padding for better appearance */
+    position: relative; /* Add position relative to the parent div */
+    width: 50%;
+    margin-right: auto;
+    margin-left: 0;
+  }
+  
+  .about-content {
     display: flex;
+    flex-wrap: wrap; /* Wrap the items in the container */
     justify-content: space-between;
     align-items: flex-start;
-}
-
-.get-to-know-me,
-.my-skills {
-    width: 48%; /* Adjust the width as needed */
-}
-
-.get-to-know-me h3,
-.my-skills h3 {
-    margin-top: 0;
-}
-
-.my-skills ul {
+  }
+  
+  .get-to-know-me {
+    width: 100%; /* Adjust the width as needed */
+    margin-bottom: 2rem; /* Add some space between the two sections */
+  }
+  
+  .my-skills {
+    width: 100%; /* Adjust the width as needed */
+    margin-bottom: 2rem; /* Add some space between the two sections */
+  }
+  
+  .my-skills ul {
     display: flex;
     flex-wrap: wrap;
     list-style-type: none;
     padding: 0;
-}
-
-.my-skills li {
+  }
+  
+  .my-skills li {
     background-color: #f0f0f0;
     border: 1px solid #ddd;
     border-radius: 4px;
@@ -319,16 +325,40 @@ h3 {
     margin: 0.5rem;
     padding: 0.5rem 1rem;
     text-align: center;
+  }
+
+  .night-mode .my-skills li {
+    filter: brightness(70%);
+  }
+  
+  /* PICTURE MANUALLY PLACED */
+  .my-pic { 
+    width: 40%;
+    margin-left: 10%;
+    position: absolute;
+    left: 37em;
+    top: 80em;
+    overflow: hidden;
+  }
+  
+  .my-pic img {
+    max-width: 25em;
+    height: auto;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.87);
+  }
+  
+body.night-mode .my-pic {
+    filter: brightness(70%);
 }
 
-body.night-mode #about {
+  body.night-mode #about {
     background-color: #333333;
     color: #ffffff;
   }
   
   body.night-mode #about h3 {
-    color:#FFD700;
-  }
+    color: #FFD700;
+  }  
 
 /* PROJECTS */
 #projects {
