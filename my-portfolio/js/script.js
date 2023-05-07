@@ -2,6 +2,7 @@ $(document).ready(function() {
   // Get references to DOM elements
   const body = $('body');
   const nav = $('nav');
+  const headName = $('.head-name');
   const socialIcons = $('.social-icons');
   const nightModeToggle = $('#nightModeToggle');
   const navLinks = $('nav a[href^="#"]');
@@ -39,4 +40,16 @@ $(document).ready(function() {
   // Add current year to footer
   const currentYear = new Date().getFullYear();
   footerText.text(footerText.text() + ` | ${currentYear}`);
+
+  // Animate name
+  headName.animate({
+    fontSize: "50px",
+    top: "+=50px"
+  }, 300, "swing", function() {
+    headName.animate({
+      fontSize: "40px",
+      top: "-=50px"
+    }, 500, "swing");
+  });
 });
+
