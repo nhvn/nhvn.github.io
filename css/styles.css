@@ -611,5 +611,8 @@ footer a {
     .social-icons {
       top: 10em;
     }
+    .night-mode-prompt.show {
+      display: none;
+    }
 
 }
