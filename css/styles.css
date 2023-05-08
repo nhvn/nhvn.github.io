@@ -56,11 +56,13 @@ body.night-mode p {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  
 }
 
 header {
     text-align: left;
     height: 45em;
+
 }
 
 .head-hello {
@@ -381,38 +383,25 @@ h3 {
 }
 
 /* ABOUT ME */
-#about {
+#about { 
   background-color: #ffffff;
   padding: 2rem;
   border-radius: 10px;
-  margin-bottom: 20px;
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
+  display: flex; 
 }
 
-.about-content {
-  flex: 1;
-  /* max-width: 50%; */
+.about-me {
+  max-width: 50%;
 }
 
-.get-to-know-me, .my-skills {
-  max-width: 100%;
-}
-
-.my-skills {
-  margin-top: 20px;
-  /* max-width: 50%; */
-}
-
-.my-skills ul {
+.my-skills ul { 
   display: flex;
   flex-wrap: wrap;
   list-style-type: none;
   padding: 0;
 }
 
-.my-skills li {
+.my-skills li { 
   background-color: #f0f0f0;
   border: 1px solid #ddd;
   border-radius: 4px;
@@ -423,32 +412,35 @@ h3 {
   text-align: center;
 }
 
-.my-skills li:hover {
-  background-color:white;
-}
-
-.night-mode .my-skills li {
-  filter: brightness(70%);
-}
-
-/* .my-pics {
-  max-width: 50%;
+.pics {
+  max-width: calc(50% - 1rem); 
   display: flex;
-  align-items: flex-start;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.my-pic img, .my-guitar img {
+.my-pic,
+.my-guitar {
+  width: 100%; 
+  margin: 2em 2em 5em 5em;
+}
+
+.my-pic img,
+.my-guitar img {
   filter: brightness(90%);
   border-radius: 10px;
-  max-width: 300px;
-  max-height: 300px;
+  width: 450px;
+  height: 450px;
+  object-fit: cover;
+  object-position: center;
+
 }
 
 .my-pic:hover img,
 .my-guitar:hover img {
   filter: brightness(100%);
   z-index: 1;
-} */
+}
 
 body.night-mode #about {
   background-color: #333333;
@@ -463,9 +455,9 @@ body.night-mode #about h3 {
 }  
 
 /* PROJECTS */
-/* #projects {
+#projects {
     padding: 2em;
-} */
+}
 
 .projects {
     display: flex;
@@ -599,20 +591,59 @@ footer a {
     .project {
         flex-basis: calc(50% - 10px);
     }
+
     .nav-container {
-      font-size: xx-small;
+      font-size: 9px;
     }
+
     .head-name {
       font-size: 35px !important;
     }
+
     .head-name-info {
       font-size: 10px;
     }
+
     .social-icons {
       top: 10em;
     }
+
+    .about-me {
+      max-width: 100% !important;
+      order: 2;
+    }
+
+    #about {
+    flex-direction: column;
+    }
+    .my-skills {
+      order: 3;
+    }
+    .pics {
+      all: unset;
+      text-align: center;
+      flex-direction: column;
+      order: 1;
+    }
+
+    .my-pic,
+    .my-guitar {
+      margin: 0 auto;
+    }
+    
+    .my-pic img,
+    .my-guitar img {
+      filter: brightness(90%);
+      border-radius: 10px;
+      width: 250px;
+      height: 250px;
+      object-fit: cover;
+      object-position: center;
+    }
+.project {
+  width: 17em;
+}
     .night-mode-prompt.show {
       display: none;
     }
-
 }
