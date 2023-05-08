@@ -66,17 +66,17 @@ $(document).ready(function() {
   // Set a timeout to hide the prompt
   setTimeout(() => {
     nightModePrompt.classList.remove('show');
-  }, 10000);
+  }, 20000);
 
-// Hide/show nav bar on scroll
-let prevScrollpos = window.pageYOffset;
-window.onscroll = function() {
-  const currentScrollPos = window.pageYOffset;
-  if (prevScrollpos > currentScrollPos) {
-    document.querySelector("nav").style.top = "0";
-  } else {
-    document.querySelector("nav").style.top = "-100px";
-  }
-  prevScrollpos = currentScrollPos;
-}
+// // Hide/show nav bar on scroll
+// let prevScrollpos = window.pageYOffset;
+// window.onscroll = function() {
+//   const currentScrollPos = window.pageYOffset;
+//   if (prevScrollpos > currentScrollPos) {
+//     document.querySelector("nav").style.top = "0";
+//   } else {
+//     document.querySelector("nav").style.top = "-100px";
+//   }
+//   prevScrollpos = currentScrollPos;
+// }
 });

@@ -41,7 +41,7 @@ z-index: -1;
 }
 
 p {
-    color: #666; /* You can adjust the shade of grey by changing the hex value */
+    color: #666; 
 }
 
 body.night-mode p {
@@ -49,10 +49,18 @@ body.night-mode p {
 }
 
 /* HEADER */
+
+#home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
 header {
     text-align: left;
-    padding-top: 25em;
-    padding-bottom: 32em;
+    height: 45em;
 }
 
 .head-hello {
@@ -107,7 +115,7 @@ header::after {
 /* NAV BAR */
 nav {
   background-color: #fff;
-  padding: 20px 0;
+  padding: 10px 0;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   position: fixed;
   top: 0;
@@ -223,7 +231,7 @@ nav.night-mode .nav-right .night-mode-icon:hover {
   position: fixed;
   top: 10px;
   right: 100px;
-  padding: 10px;
+  padding: 5px;
   background-color:#75a12e83;
   border-radius: 5px;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
@@ -242,7 +250,7 @@ nav.night-mode .nav-right .night-mode-icon:hover {
 
 .night-mode-prompt.show {
   display: flex; /* Show the prompt when the "show" class is added */
-  animation: fadeOut 3s linear 3s forwards; /* Set a fade-out animation */
+  animation: fadeOut 3s linear 5s forwards; /* Set a fade-out animation */
   opacity: .8;
 }
 
@@ -264,7 +272,7 @@ body.night-mode .night-mode-prompt {
 .social-icons {
     display: flex;
     flex-direction: column;
-    position: fixed;
+    position: absolute;
     left: 10px;
     top: 50%;
     transform: translateY(-50%);
@@ -347,7 +355,7 @@ body.night-mode .night-mode-prompt {
 /* MAIN CONTENT */
 .container {
     margin: 0 auto;
-    padding: 50px;
+    /* padding: 50x; */ 
     background-color: rgba(255, 255, 255, 0); /* the 0 sets transparency */
     overflow: auto;
 }
@@ -373,34 +381,28 @@ h3 {
 }
 
 /* ABOUT ME */
-
 #about {
-    background-color: #ffffff;
-    padding: 2rem; /* Add some padding for better appearance */
-    position: relative; /* Add position relative to the parent div */
-    width: 50%;
-    margin-right: auto;
-    margin-left: 0;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    padding: 20px;
-  }
-  
-.about-content {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 10px;
+  margin-bottom: 20px;
   display: flex;
-  flex-wrap: wrap; /* Wrap the items in the container */
-  justify-content: space-between;
   align-items: flex-start;
+  justify-content: space-between;
 }
 
-.get-to-know-me {
-  width: 100%; /* Adjust the width as needed */
-  margin-bottom: 2rem; /* Add some space between the two sections */
+.about-content {
+  flex: 1;
+  /* max-width: 50%; */
+}
+
+.get-to-know-me, .my-skills {
+  max-width: 100%;
 }
 
 .my-skills {
-  width: 100%; /* Adjust the width as needed */
-  margin-bottom: 2rem; /* Add some space between the two sections */
+  margin-top: 20px;
+  /* max-width: 50%; */
 }
 
 .my-skills ul {
@@ -429,59 +431,24 @@ h3 {
   filter: brightness(70%);
 }
 
-/* PICTURES */
-  
-.my-pic { /* PICTURE MANUALLY PLACED */
-  margin-left: 10%;
-  position: absolute;
-  left: 45%;
-  top: 84em;
-  overflow: hidden;
+/* .my-pics {
+  max-width: 50%;
+  display: flex;
+  align-items: flex-start;
 }
 
-.my-pic img {
+.my-pic img, .my-guitar img {
   filter: brightness(90%);
-  max-width: 30em;
-  height: auto;
-  /* box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.87); */
   border-radius: 10px;
+  max-width: 300px;
+  max-height: 300px;
 }
 
-.my-pic:hover img {
-  filter: brightness(100%);
-  z-index: 1;
-  /* box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.87); */
-}
-  
-body.night-mode .my-pic {
-    filter: brightness(90%);
-}
-
-.my-guitar { /* PICTURE MANUALLY PLACED */
-  margin-left: 10%;
-  position: absolute;
-  left: 45%;
-  top: 114em;
-  overflow: hidden;
-}
-
-.my-guitar img {
-  filter: brightness(90%);
-  max-width: 30em;
-  height: auto;
-  /* box-shadow: 1px 1px 30px rgba(0, 0, 0, 0.87); */
-  border-radius: 10px;
-}
-
+.my-pic:hover img,
 .my-guitar:hover img {
   filter: brightness(100%);
   z-index: 1;
-  /* box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.87); */
-}
-  
-body.night-mode .my-guitar {
-    filter: brightness(90%);
-}
+} */
 
 body.night-mode #about {
   background-color: #333333;
