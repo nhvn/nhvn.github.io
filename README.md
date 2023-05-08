@@ -1,6 +1,6 @@
 # Alan Nhan's Personal Website
 
-This is the repository for my personal website, built using HTML, CSS, and JavaScript. I have not optimized it for mobile use just yet, but I will do so in the near future.
+This is the repository for my personal website, built using HTML, CSS, and JavaScript.
 
 ## Features
 

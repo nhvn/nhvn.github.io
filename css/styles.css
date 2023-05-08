@@ -3,7 +3,7 @@
 
 /* Global styles */
 * {
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     text-decoration: none; /* Used to remove lines under projects but could be more */
 }
 
@@ -463,9 +463,9 @@ body.night-mode #about h3 {
 }  
 
 /* PROJECTS */
-#projects {
+/* #projects {
     padding: 2em;
-}
+} */
 
 .projects {
     display: flex;
@@ -599,4 +599,17 @@ footer a {
     .project {
         flex-basis: calc(50% - 10px);
     }
+    .nav-container {
+      font-size: xx-small;
+    }
+    .head-name {
+      font-size: 35px !important;
+    }
+    .head-name-info {
+      font-size: 10px;
+    }
+    .social-icons {
+      top: 10em;
+    }
+
 }
