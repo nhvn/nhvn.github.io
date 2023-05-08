@@ -363,7 +363,7 @@
   }
   .my-pic,.my-guitar {
     width:100%;
-    margin:2em 2em 5em 5em;
+    margin:2em 2em 2em 5em;
   }
   .my-pic img,.my-guitar img {
     filter:brightness(90%);
@@ -372,6 +372,9 @@
     height:450px;
     object-fit:cover;
     object-position:center;
+  }
+  .my-guitar {
+    margin-bottom: 0em ;
   }
   .my-pic:hover img,.my-guitar:hover img {
     filter:brightness(100%);
