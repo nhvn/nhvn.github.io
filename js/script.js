@@ -9,6 +9,7 @@ $(document).ready(function() {
   const footerText = $('footer p');
   const nightModeElements = [body, nav, socialIcons];
   const nightModePrompt = document.querySelector('.night-mode-prompt');
+  const currentYear = new Date().getFullYear();
 
   // Night Mode
   nightModeToggle.click(function() {
@@ -33,7 +34,6 @@ $(document).ready(function() {
   });
 
   // Add current year to footer
-  const currentYear = new Date().getFullYear();
   footerText.text(footerText.text() + ` | ${currentYear}`);
 
   // Animate name
