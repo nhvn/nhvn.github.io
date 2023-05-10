@@ -506,7 +506,7 @@
   /* MOBILE STYLES */
   
   @media screen and (max-width:992px) {
-    .project {
+  .project {
     flex-basis:calc(50% - 10px);
   }
   .nav-container {
