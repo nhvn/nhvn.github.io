@@ -97,7 +97,7 @@
   /* NAV BAR */
   
   nav {
-    background-color:#fff;
+    background-color:white;
     padding:10px 0;
     box-shadow:0 2px 4px rgba(0,0,0,0.1);
     position:fixed;
@@ -118,21 +118,16 @@
     align-items:center;
   }
   .nav-left a {
-    /* LOGO */
-    color:#333;
-    text-decoration:none;
-    font-weight:bold;
     margin-left:2em;
   }
   .logo {
     display:inline-block;
-    padding:4px;
-    background-color:#eeeeee7e;
-    border:1px solid #ccc;
-    border-radius:5px;
   }
+  .logo img {
+    width: 45px;
+  }  
   .nav-left a:hover {
-    color:#598c4b;
+    box-shadow: 0px 3px 6px rgba(0,0,0,0.3);
   }
   .nav-middle ul {
     display:flex;
@@ -517,10 +512,8 @@
     flex-basis: auto;
     align-items: center;
   }
-  .project img {
-  }
   .nav-container {
-    font-size:9px;
+    font-size:13px;
   }
   .head-name {
     font-size:35px !important;
