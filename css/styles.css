@@ -125,7 +125,13 @@
   }
   .logo img {
     width: 45px;
-  }  
+  }
+  .logo img:hover {
+    box-shadow: 0 0 15px #3c5e32;
+  }
+  body.night-mode .logo img:hover {
+    box-shadow: 0 0 15px #FFD700;
+  }    
   .nav-middle ul {
     display:flex;
     list-style-type:none;
