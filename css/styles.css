@@ -1,5 +1,6 @@
 /* Import Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/larke-neue');
 
   /* Global styles */
   * {
@@ -7,7 +8,7 @@
     /* Used to remove lines under projects but could be more */
   }
   body {
-    font-family:'Roboto','Arial',sans-serif;
+    font-family:'Larke Neue Regular','Roboto','Arial',sans-serif;
     line-height:1.6;
     margin:0;
     padding:0;
