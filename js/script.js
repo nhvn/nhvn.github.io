@@ -1,11 +1,11 @@
 $(document).ready(function() {
   // Get references to DOM elements
   const body = $('body');
-  const nav = $('nav');
+  const nav = $('.nav-container');
   const headName = $('.head-name');
   const socialIcons = $('.social-icons');
   const nightModeToggle = $('#nightModeToggle');
-  const navLinks = $('nav a[href^="#"]');
+  const navLinks = $('.nav-container a[href^="#"]');
   const footerText = $('footer p');
   const nightModeElements = [body, nav, socialIcons];
   const nightModePrompt = document.querySelector('.night-mode-prompt');
@@ -53,30 +53,4 @@ $(document).ready(function() {
 
   // Add class to trigger CSS animation
   headName.addClass("animate");
-
-  // Show the prompt when the page loads
-  nightModePrompt.classList.add('show');
-
-  // Add a click event listener to the prompt
-  nightModePrompt.addEventListener('click', () => {
-    // Remove the "show" class when the prompt is clicked
-    nightModePrompt.classList.remove('show');
-  });
-
-  // Set a timeout to hide the prompt
-  setTimeout(() => {
-    nightModePrompt.classList.remove('show');
-  }, 20000);
-
-// // Hide/show nav bar on scroll
-// let prevScrollpos = window.pageYOffset;
-// window.onscroll = function() {
-//   const currentScrollPos = window.pageYOffset;
-//   if (prevScrollpos > currentScrollPos) {
-//     document.querySelector("nav").style.top = "0";
-//   } else {
-//     document.querySelector("nav").style.top = "-100px";
-//   }
-//   prevScrollpos = currentScrollPos;
-// }
 });

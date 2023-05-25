@@ -20,7 +20,4 @@ This is the repository for my personal website, built using HTML, CSS, and JavaS
 
 You can view the live version of my website at `nhvn.github.io`.
 
-## Credits
-
-Background by starline on Freepik
 

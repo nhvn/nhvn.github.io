@@ -1,322 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
-  
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-      Alan Nhan's Portfolio
-    </title>
+    <title> Alan Nhan's Portfolio </title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
-    rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" type="image/png" href="/img/logo.png">
-    <!-- THIS IS FOR LOGO ON THE BROWSER -->
   </head>
-  
   <body>
-    <div id="backgroundOverlay">
-    </div>
+    <div id="backgroundOverlay"></div>
     <!-- NAVIGATION BAR -->
     <div class="container">
-      <nav>
-        <div class="nav-container">
-          <div class="nav-left">
-            <a href="#home" class="logo">
-              <img src="img/logo.png" alt="logo">
-            </a>            
-          </div>
-          <div class="nav-middle">
-            <ul>
-              <li>
-                <a href="#about">
-                  ABOUT
-                </a>
-              </li>
-              <li>
-                <a href="#projects">
-                  PROJECTS
-                </a>
-              </li>
-              <li>
-                <a href="#contact">
-                  CONTACT
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div class="nav-right">
-            <i class="fas fa-moon night-mode-icon" id="nightModeToggle">
-            </i>
-          </div>
-        </div>
-      </nav>
-    </div>
-    <div class="night-mode-prompt">
-      <span>
-        Click to toggle night mode
-      </span>
-      <i class="fas fa-arrow-right">
-      </i>
-    </div>
-    <div class="social-icons">
-      <a href="https://linkedin.com/in/alannhans" target="_blank">
-        <i class="fab fa-linkedin">
-        </i>
-      </a>
-      <a href="https://github.com/nhvn" target="_blank">
-        <i class="fab fa-github">
-        </i>
-      </a>
-      <a href="mailto:anhan1@uci.edu" target="_blank">
-        <i class="fas fa-envelope">
-        </i>
-      </a>
-    </div>
-    <header id="home">
-      <div class="head-hello">
-        <p>
-          Hello there, I'm
-        </p>
-      </div>
-      <div class="head-name">
-        <h1>
-          Alan Nhan.
-        </h1>
-      </div>
-      <div class="head-name-info">
-        <p>
-          A dedicated junior full-stack engineer, skilled in frontend and backend
-          technologies.
-        </p>
-      </div>
-    </header>
-    <main>
-      <!-- ABOUT -->
-      <section id="about">
-        <div class="about-me">
-          <h2>
-            ABOUT
-          </h2>
-          <div class="abouts">
-            <div class="get-to-know-me">
-              <h3>
-                Get to Know Me
-              </h3>
-              <p>
-                I discovered my passion for software development from the thrill of solving
-                a complex puzzle. It all began with a simple algorithm problem from a mobile
-                app, a challenge I stumbled upon before I had even dipped my toes into
-                the realm of programming languages. The challenge was like a puzzle, but
-                the reward was in creating something that just worked.
-              </p>
-              <p>
-                As a recent graduate of CSULB's bootcamp program, I'm transitioning from
-                the healthcare field to software development with eagerness to apply my
-                acquired skills and knowledge in this dynamic domain. My proficiency extends
-                across multiple languages, but my true joy lies in tackling complex problems
-                and crafting innovative solutions. I'm excited about joining a team where
-                I can leverage these skills, evolve as a software engineer, and contribute
-                to transformative digital solutions.
-              </p>
-              <p>
-                Outside of my professional life, I enjoy staying active through working
-                out, running, and playing guitar. I cherish quality time with friends and
-                family, exploring new cuisines, and traveling to experience different cultures
-                and sights. These diverse interests fuel my creativity and passion for
-                problem-solving in software development.
-              </p>
-            </div>
-            <div class="my-skills">
-              <h3>
-                My Skills
-              </h3>
-              <ul>
+      <div class="nav-container">
+        <div class="nav-right">
+          <i class="fas fa-moon night-mode-icon" id="nightModeToggle"></i>
+
+          <div class="navigation">
+            <img src="img/logo.png" alt="logo">
+            <div class="nav-menu">
+              <ul class="no-dot">
                 <li>
-                  HTML
+                  <a href="#about">
+                    ABOUT
+                  </a>
                 </li>
                 <li>
-                  CSS
+                  <a href="#projects">
+                    PROJECTS
+                  </a>
                 </li>
                 <li>
-                  JavaScript
-                </li>
-                <li>
-                  React
-                </li>
-                <li>
-                  SASS
-                </li>
-                <li>
-                  Github
-                </li>
-                <li>
-                  UX/UI Design
-                </li>
-                <li>
-                  Node.js
-                </li>
-                <li>
-                  Python
-                </li>
-                <li>
-                  MongoDB
-                </li>
-                <li>
-                  NoSQL
-                </li>
-                <li>
-                  Basic SQL
-                </li>
-                <li>
-                  Amazon Web Services (AWS)
-                </li>
-                <li>
-                  API Deployment
-                </li>
-                <li>
-                  C++
-                </li>
-                <li>
-                  Java
+                  <a href="#contact">
+                    CONTACT
+                  </a>
                 </li>
               </ul>
             </div>
           </div>
-          <!-- <div class="pics">
-            <div class="my-pic">
-              <img src="img/me.JPG">
+
+          <div class="hamburger-menu">
+            <i class="fas fa-bars"></i>
+            <div class="social-menu">
+              <a href="https://linkedin.com/in/alannhans" target="_blank">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a href="https://github.com/nhvn" target="_blank">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="mailto:anhan1@uci.edu" target="_blank">
+                <i class="fas fa-envelope"></i>
+              </a>
             </div>
-            <div class="my-guitar">
-              <img src="img/guitar.jpg">
-            </div>
-          </div> -->
+          </div>
+
         </div>
-      </section>
-      
-      <!-- PROJECTS -->
-      <section id="projects">
-        <h2>
-          PROJECTS
-        </h2>
-        <h3>
-          What I Have Worked On
-        </h3>
-        <p>
-          As a full-stack software engineer, I have successfully completed various software development projects, 
-          which you can find in the section below. This website is one of my latest creations, showcasing my skills 
-          and abilities in web development. I even implemented a night mode feature for the first time, which I think 
-          is pretty cool. Besides working on more personal projects to expand my portfolio, I am also learning more about 
-          algorithms and data structures to enhance my technical expertise. You can also visit my GitHub to see some of my 
-          other work.
-        </p>
-        <div class="projects">
-          <a href="https://pumpkin-lost-te.web.app/" target="_blank">
-          <!-- <a href="https://github.com/nhvn/first-browser-game" target="_blank"> -->
-            <div class="project">
-              <img src="img/pumpkin.png" alt="Project Image">
-              <div class="overlay">
-              </div>
-              <div class="project-info">
-                <h3>
-                  "Pumpkin Lost-te" Game
-                </h3>
-                <p>                 
-                  Welcome to my first game project, inspired by 'Flappy Bird', where I utilized HTML, CSS, JavaScript and deployed using Firebase. The objective is to dodge barriers and reach a destination, capturing the essence of classic games. While simple, it was born out of a desire for nostalgia and a love for game development. At the time of typing this, it's only optimized for Windows computer.
-                </p>
-                <a href="https://github.com/nhvn/first-browser-game" target="_blank">
-                </a>
-              </div>
-            </div>
-          </a>
-          <a href="https://github.com/nhvn/to-do-list" target="_blank">
-            <div class="project">
-              <img src="img/todo.png" alt="Project Image">
-              <div class="overlay">
-              </div>
-              <div class="project-info">
-                <h3>
-                  To-Do-List App
-                </h3>
-                <p>
-                  Manage your tasks efficiently and effectively with our task app built using HTML, CSS, JavaScript, and PostgreSQL. Create, edit, and delete tasks with deadlines and priorities, and mark them as done or undone. Sign up, log in, and log out easily, and rest assured that your tasks are stored safely in a PostgreSQL database.
-                </p>
-                <a href="https://github.com/nhvn/first-browser-game" target="_blank">
-                </a>
-              </div>
-            </div>
-          </a>
-          <a href="https://github.com/nhvn/budget-app" target="_blank">
-            <div class="project">
-              <img src="/img/comingSoon.png" alt="Project Image">
-              <div class="overlay">
-              </div>
-              <div class="project-info">
-                <h3>
-                  Budget App <span style="font-weight: normal;">(Coming Soon)</span>
-                </h3>                
-                <p>
-                  Effortlessly track your spending and savings with our budget app developed using Python, Django (backend), and Angular, TypeScript (frontend). Set budgets, categorize expenses, and receive limit notifications. Stay in control of your finances, achieve your goals with our intuitive tool. Your data is securely stored in PostgreSQL. Follow my progress as I shape the app.
-                </p>
-                <a href="https://github.com/nhvn/first-browser-game" target="_blank">
-                </a>
-              </div>
-            </div>
-          </a>
+      </div>
+      <header id="home">
+        <div class="head-hello">
+          <p> Hi there, I'm </p>
         </div>
-      </section>
-      <!-- CONTACT -->
-      <section id="contact">
-        <h2>
-          CONTACT
-        </h2>
-        <h3>
-          Let's Chat
-        </h3>
-        <p>
-          I am an enthusiastic full-stack software engineer actively seeking new
-          opportunities and challenges. I am passionate about problem-solving and
-          innovation, and I thrive in collaborative environments where I can work
-          with like-minded professionals. While I may not be proficient in all programming
-          languages, I am a fast learner and am eager to contribute to the success
-          of your team or project.
-        </p>
-        <p>
-          Please feel free to reach out to me via LinkedIn or by email to discuss
-          your requirements. I am excited to learn more about how my skills and expertise
-          can help drive your organization or project forward. If you would like
-          to review my resume, I am happy to provide it upon request. Looking forward
-          to connecting with you!
-        </p>
-        <div class="connect-box">
-          <div class="connect-links">
-            <a href="https://www.linkedin.com/in/alannhans/" target="_blank">
-              <i class="fab fa-linkedin">
-              </i>
-              Connect
+        <div class="head-name">
+          <h1> Alan Nhan. </h1>
+        </div>
+        <div class="head-name-info">
+          <p> A dedicated junior full-stack engineer, skilled in frontend and backend technologies. </p>
+        </div>
+      </header>
+      <main>
+        <!-- ABOUT -->
+        <section id="about">
+          <div class="about-me">
+            <h2> ABOUT </h2>
+            <div class="get-to-know-me">
+              <h3> Get to Know Me </h3>
+              <p> I discovered my passion for software development from the thrill of solving a complex puzzle. It all began with a simple algorithm problem from a mobile app, a challenge I stumbled upon before I had even dipped my toes into the realm of programming languages. The challenge was like a puzzle, but the reward was in creating something that just worked. </p>
+              <p> As a recent graduate of CSULB's bootcamp program, I'm transitioning from the healthcare field to software development with eagerness to apply my acquired skills and knowledge in this dynamic domain. My proficiency extends across multiple languages, but my true joy lies in tackling complex problems and crafting innovative solutions. I'm excited about joining a team where I can leverage these skills, evolve as a software engineer, and contribute to transformative digital solutions. </p>
+              <p> Outside of my professional life, I enjoy staying active through working out, running, and playing guitar. I cherish quality time with friends and family, exploring new cuisines, and traveling to experience different cultures and sights. These diverse interests fuel my creativity and passion for problem-solving in software development. </p>
+            </div>
+            <div class="my-skills">
+              <h3> My Skills </h3>
+              <ul>
+                <li> HTML </li>
+                <li> CSS </li>
+                <li> JavaScript </li>
+                <li> React </li>
+                <li> SASS </li>
+                <li> Github </li>
+                <li> UX/UI Design </li>
+                <li> Node.js </li>
+                <li> Python </li>
+                <li> MongoDB </li>
+                <li> NoSQL </li>
+                <li> Basic SQL </li>
+                <li> Amazon Web Services (AWS) </li>
+                <li> API Deployment </li>
+                <li> C++ </li>
+                <li> Java </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <!-- PROJECTS -->
+        <section id="projects">
+          <h2> PROJECTS </h2>
+          <h3> What I Have Worked On </h3>
+          <p> As a full-stack software engineer, I have successfully completed various software development projects, which you can find in the section below. This website is one of my latest creations, showcasing my skills and abilities in web development. I even implemented a night mode feature for the first time, which I think is pretty cool. Besides working on more personal projects to expand my portfolio, I am also learning more about algorithms and data structures to enhance my technical expertise. You can also visit my GitHub to see some of my other work. </p>
+          <div class="projects">
+            <a href="https://pumpkin-lost-te.web.app/" target="_blank">
+              <!-- <a href="https://github.com/nhvn/first-browser-game" target="_blank"> -->
+              <div class="project">
+                <img src="img/pumpkin.png" alt="Project Image">
+                <div class="overlay"></div>
+                <div class="project-info">
+                  <h3> "Pumpkin Lost-te" Game </h3>
+                  <p> Welcome to my first game project, inspired by 'Flappy Bird', where I utilized HTML, CSS, JavaScript and deployed using Firebase. The objective is to dodge barriers and reach a destination, capturing the essence of classic games. While simple, it was born out of a desire for nostalgia and a love for game development. At the time of typing this, it's only optimized for Windows computer. </p>
+                  <a href="https://github.com/nhvn/first-browser-game" target="_blank"></a>
+                </div>
+              </div>
             </a>
-            <a href="mailto:anhan1@uci.edu" target="_blank">
-              <i class="fas fa-envelope">
-              </i>
-              Email
+            <a href="https://github.com/nhvn/to-do-list" target="_blank">
+              <div class="project">
+                <img src="img/todo.png" alt="Project Image">
+                <div class="overlay"></div>
+                <div class="project-info">
+                  <h3> To-Do-List App </h3>
+                  <p> Manage your tasks efficiently and effectively with our task app built using HTML, CSS, JavaScript, and PostgreSQL. Create, edit, and delete tasks with deadlines and priorities, and mark them as done or undone. Sign up, log in, and log out easily, and rest assured that your tasks are stored safely in a PostgreSQL database. </p>
+                  <a href="https://github.com/nhvn/first-browser-game" target="_blank"></a>
+                </div>
+              </div>
+            </a>
+            <a href="https://github.com/nhvn/budget-app" target="_blank">
+              <div class="project">
+                <img src="/img/comingSoon.png" alt="Project Image">
+                <div class="overlay"></div>
+                <div class="project-info">
+                  <h3> Budget App <span style="font-weight: normal;">(Coming Soon)</span>
+                  </h3>
+                  <p> Effortlessly track your spending and savings with our budget app developed using Python, Django (backend), and Angular, TypeScript (frontend). Set budgets, categorize expenses, and receive limit notifications. Stay in control of your finances, achieve your goals with our intuitive tool. Your data is securely stored in PostgreSQL. Follow my progress as I shape the app. </p>
+                  <a href="https://github.com/nhvn/first-browser-game" target="_blank"></a>
+                </div>
+              </div>
             </a>
           </div>
-        </div>
-      </section>
-    </main>
-    <footer>
-      <p>
-        Designed & Built by Alan Nhan
-      </p>
-      </div>
-      <script src="https://code.jquery.com/jquery-3.6.0.min.js">
-      </script>
-      <script src="js/script.js">
-      </script>
-      </div>
+        </section>
+        <!-- CONTACT -->
+        <section id="contact">
+          <h2> CONTACT </h2>
+          <h3> Let's Chat </h3>
+          <p> I am an enthusiastic full-stack software engineer actively seeking new opportunities and challenges. I am passionate about problem-solving and innovation, and I thrive in collaborative environments where I can work with like-minded professionals. While I may not be proficient in all programming languages, I am a fast learner and am eager to contribute to the success of your team or project. </p>
+          <p> Please feel free to reach out to me via LinkedIn or by email to discuss your requirements. I am excited to learn more about how my skills and expertise can help drive your organization or project forward. If you would like to review my resume, I am happy to provide it upon request. Looking forward to connecting with you! </p>
+          <div class="connect-box">
+            <div class="connect-links">
+              <a href="https://www.linkedin.com/in/alannhans/" target="_blank">
+                <i class="fab fa-linkedin"></i> Connect </a>
+              <a href="mailto:anhan1@uci.edu" target="_blank">
+                <i class="fas fa-envelope"></i> Email </a>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer>
+        <p> Designed & Built by Alan Nhan </p>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/script.js"></script>
+    </div>
   </body>
-
 </html>
