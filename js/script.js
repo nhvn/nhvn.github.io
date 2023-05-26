@@ -4,21 +4,30 @@ $(document).ready(function() {
   const nav = $('.nav-container');
   const headName = $('.head-name');
   const socialIcons = $('.social-icons');
-  const nightModeToggle = $('#nightModeToggle');
+  const moonIcon = $('#moonIcon');
+  const sunIcon = $('#sunIcon');
   const navLinks = $('.nav-container a[href^="#"]');
   const footerText = $('footer p');
   const nightModeElements = [body, nav, socialIcons];
   const nightModePrompt = document.querySelector('.night-mode-prompt');
   const currentYear = new Date().getFullYear();
 
-  // Night Mode
-  nightModeToggle.click(function() {
+  // Toggle night mode
+  $('.night-mode-icon').on('click', function() {
+    moonIcon.toggle();
+    sunIcon.toggle();
     toggleNightMode();
   });
 
   function toggleNightMode() {
     nightModeElements.forEach(element => element.toggleClass("night-mode"));
-    nightModeToggle.toggleClass("active");
+    if (body.hasClass("night-mode")) {
+      moonIcon.addClass("active");
+      sunIcon.removeClass("active");
+    } else {
+      moonIcon.removeClass("active");
+      sunIcon.addClass("active");
+    }
     localStorage.setItem("nightMode", body.hasClass("night-mode"));
   }
 

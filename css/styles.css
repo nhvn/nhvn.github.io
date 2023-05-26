@@ -5,14 +5,13 @@
 /* Global styles */
 * {
   text-decoration: none;
-  /* Used to remove lines under projects but could be more */
 }
 body {
-  font-family: "Larke Neue Regular", "Roboto", "Arial", sans-serif;
+  font-family: "Larke Neue Thin", "Roboto", "Arial", sans-serif;
   line-height: 1.6;
   margin: 0;
   padding: 0;
-  background-size: cover;
+  background-color: rgb(245, 245, 245);
 }
 .night-mode {
   color: white;
@@ -39,42 +38,26 @@ body.night-mode p {
 
 #home {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   height: 100vh;
 }
-header {
-  text-align: left;
-  height: 45em;
-}
-.head-hello {
-  font-size: 30px;
-  text-align: center;
-}
-body.night-mode .head-hello p {
-  color: rgba(255, 255, 255, 0.541) !important;
-}
 .head-name {
-  font-size: 50px;
-  text-align: center;
-  /* color:#598c4b; */
+  position: absolute;
+  top: 25%; /* Adjust this value as needed */
 }
-.head-name-info {
-  font-size: 20px;
-  text-align: center;
-  color: #598c4b;
-}
-.head-name-info p {
-  color: #598c4b;
-}
-body.night-mode .head-name-info p {
-  color: #90d4c4 !important;
-  /* color:#FFD700 !important; */
-}
-.head-hello p,
 .head-name h1 {
-  margin: 0;
+  margin: 0 3em;
+  font-size: 65px;
+  color: black;
+  font-weight: 500;
+}
+.name-text {
+  font-weight: 900;
+}
+.highlight-text {
+  color: #6a9b8f;
+}
+body.night-mode .highlight-text {
+  color: #90d4c4;
 }
 .head-name span {
   opacity: 0;
@@ -91,6 +74,9 @@ header::after {
   display: table;
   clear: both;
 }
+body.night-mode .head-name h1 {
+  color: white;
+}
 /* NAV BAR */
 
 .nav-right {
@@ -99,109 +85,106 @@ header::after {
   align-items: center;
   margin: 2em 10em;
 }
+
 .nav-right .night-mode-icon {
   cursor: pointer;
-  font-size: 2em;
   color: #ccc;
-  margin-right: 20px;
+  position: fixed;
+  right: 25px;
+  top: 25px; 
 }
+
 .nav-right .night-mode-icon:hover {
-  /* filter: drop-shadow(0px 0px 10px #ffd700); */
-  color: #ffd700;
-}
-.nav-right .night-mode-icon.active {
-  color: #ffd700 !important;
   filter: drop-shadow(0px 0px 10px #ffd700);
 }
-nav.night-mode .nav-right .night-mode-icon {
-  color: #fff;
-}
-nav.night-mode .nav-right .night-mode-icon:hover {
-  color: #ffd700;
-}
-#nightModeToggle {
-  font-size: 45px;
-}
-/* NAV MENU */
 
-.navigation {
-  position: relative;
-  display: inline-block;
+#moonIcon:hover {
+  filter: drop-shadow(0px 0px 10px #ffffff);
 }
-.navigation:hover {
-  color: #598c4b;
-}
-.nav-menu {
-  display: none;
-  position: absolute;
-  font-size: 1em;
-  z-index: 1;
-  color: #ccc;
-  right: 0;
-  text-align: center;
-}
-.nav-menu a {
-  color: #000000; /* Replace with your desired default color */
-}
-.nav-menu a:hover {
-  color: #598c4b;
-}
-.navigation:hover .nav-menu {
-  display: block;
-}
-.navigation img {
-  height: 50px;
-  margin-right: 20px;
-}
-.navigation img:hover {
-  filter: drop-shadow(0px 0px 8px #868686);
-}
-ul.no-dot {
-  list-style-type: none;
+#moonIcon.active {
+  color: #ffffff !important;
 }
 
+#sunIcon:hover {
+  filter: drop-shadow(0px 0px 10px #ffd700)
+}
 
-/* HAMBURGER MENU */
+#sunIcon, #sunIcon.active {
+  color: #ddbc00 !important;
+}
 
+#moonIcon, #sunIcon {
+  font-size: 50px;
+}
+
+.left-social {
+  display: flex;
+  align-items: center;
+}
+
+.left-social a {
+  color: inherit;
+  font-size: 2em;
+  margin-right: 1em;
+}
+
+.left-social a:hover, .hamburger-menu:hover, .nav-menu a:hover {
+  color: #6a9b8f;
+}
 .hamburger-menu {
-  position: relative;
   display: inline-block;
- }
- .hamburger-menu:hover {
-  color: #598c4b;
- }
- 
+  align-items: center;
+  top: 48px;
+}
+
 i.fas.fa-bars {
   font-size: 2em;
   cursor: pointer;
 }
-.social-menu {
-  display: none;
-  position: absolute;
-  font-size: 2em;
-  z-index: 1;
-  color: #ccc;
-}
-.social-menu a {
-  color: #000000; /* Replace with your desired default color */
-}
-.social-menu a:hover {
-  color: #598c4b;
-}
-.hamburger-menu:hover .social-menu {
+
+.nav-menu {
   display: block;
+  position: absolute;
+  top: 3em;
+  right: 115px;
+  font-size: 24px;
+  z-index: 1;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
 }
-.social-icons a:hover {
-  color: #74a12e;
+
+.hamburger-menu:hover .nav-menu {
+  max-height: 500px;
 }
-body.night-mode .social-icons,
-body.night-mode .social-icons a,
-body.night-mode .social-menu a {
-  color: #ffffff;
+
+.nav-menu a {
+  color: #000000; /* Replace with your desired default color */
+  font-weight: 900;
 }
-body.night-mode .social-menu a:hover {
-  color: #ffd700;
+
+body.night-mode .nav-menu a {
+  color: white;
+  font-weight: 900;
 }
+.left-social a, .hamburger-menu, .nav-menu a {
+  transition: color 0.3s ease;
+}
+
+body.night-mode .left-social a:hover, body.night-mode .hamburger-menu:hover, body.night-mode .nav-menu a:hover {
+  color: #90d4c4;
+}
+ul.no-dot {
+  list-style-type: none;
+  padding-left: 0;  /* removes left padding */
+  margin: 0;  /* removes all margins */
+  text-align: center;
+  margin: 20px 0;
+}
+.nav-menu li {
+  margin: 20px 0;
+}
+
 /* MAIN CONTENT */
 
 .container {
@@ -222,9 +205,11 @@ h3 {
 h2 {
   border-bottom: 2px solid #c9c9c9;
   padding-bottom: 10px;
+  font-size: 70px;
 }
 h3 {
-  color: #598c4b;
+  color: #6a9b8f;
+  font-size: 25px;
 }
 /* ABOUT ME */
 
@@ -259,8 +244,8 @@ body.night-mode #about {
   margin-bottom: 20px;
   padding: 20px;
 }
-body.night-mode #about h3 {
-  color: #ffd700;
+body.night-mode #about h3, body.night-mode #projects h3, body.night-mode #contact h3 {
+  color:#90d4c4;
 }
 /* PROJECTS */
 
@@ -274,21 +259,21 @@ body.night-mode #about h3 {
   color: black;
 }
 .project img {
-  width: 300px;
+  width: 100%;
   height: 300px;
   object-fit: cover;
   object-position: center;
-  transition: transform 0.3s ease-in-out;
+  /* transition: transform 0.3s ease-in-out; */
   opacity: 0.4;
 }
 .project:hover img {
   opacity: 1;
 }
 .project:hover {
-  transform: scale(1.1);
+  /* transform: scale(1.1); */
   z-index: 1;
   opacity: 1;
-  transition: transform 0.5s ease-in-out;
+  /* transition: transform 0.5s ease-in-out; */
 }
 body.night-mode .project:hover {
   background-color: rgba(99, 99, 99, 0.11);
@@ -298,15 +283,15 @@ body.night-mode .project:hover {
 }
 .project {
   flex-basis: 30%;
-  background-color: rgb(247, 247, 247);
+  background-color: rgb(221, 221, 221);
   border-radius: 10px;
   margin: 5px;
   padding: 10px;
   position: relative;
   width: 70%;
-  transition: transform 0.4s ease-out, box-shadow 0.4s ease-out,
-    opacity 0.4s ease-in-out;
-  transform-origin: center;
+  /* transition: transform 0.4s ease-out, box-shadow 0.4s ease-out,
+    opacity 0.4s ease-in-out; */
+  /* transform-origin: center; */
   height: 42em;
 }
 .project:hover .overlay {
@@ -319,11 +304,8 @@ body.night-mode .project:hover {
   width: 100%;
   height: 100%;
   opacity: 0;
-  transition: opacity 0.3s ease-in-out;
+  /* transition: opacity 0.3s ease-in-out; */
   z-index: 0;
-}
-body.night-mode #projects h3 {
-  color: #ffd700;
 }
 body.night-mode #projects {
   color: #ffffff;
@@ -347,9 +329,6 @@ body.night-mode #contact {
   border-radius: 10px;
   margin-bottom: 20px;
   padding: 20px;
-}
-body.night-mode #contact h3 {
-  color: #ffd700;
 }
 /* Footer */
 
@@ -397,7 +376,7 @@ body.night-mode .connect-box {
   color: #fff;
 }
 body.night-mode .connect-box a:hover {
-  background-color: #ffd900c3;
+  background-color:#6a9b8f;
 }
 /* MOBILE STYLES */
 
@@ -407,9 +386,6 @@ body.night-mode .connect-box a:hover {
   }
   .head-name {
     font-size: 35px !important;
-  }
-  .head-name-info {
-    font-size: 16px;
   }
   .about-me {
     max-width: 100% !important;
