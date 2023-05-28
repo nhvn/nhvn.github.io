@@ -164,6 +164,10 @@ i.fas.fa-bars {
   background-color: rgb(245, 245, 245);
 }
 
+body.night-mode .nav-menu {
+  background-color: #2c2c2c;
+}
+
 .hamburger-menu:hover .nav-menu {
   max-height: 500px;
 }
@@ -425,8 +429,15 @@ body.night-mode .connect-box a:hover {
   #home {
     align-items: initial;
   }
+  p {
+    font-size: 15px;
+  }
   .nav-right {
-    margin: 20px 100px;
+    margin: 27px 100px;
+  }
+  .left-social {
+    display: none;
+    /* font-size: 10px; */
   }
   .nav-menu {
     padding: 0 2em;
@@ -451,7 +462,6 @@ body.night-mode .connect-box a:hover {
   .get-to-know-me {
     padding-right: 0;
   }
-
   .head-name {
     margin: 1em 0;
     justify-content: center;
@@ -468,6 +478,9 @@ body.night-mode .connect-box a:hover {
   }
   .my-skills {
     order: 3;
+  }
+  .my-skills li {
+    font-size: 15px !important;
   }
   .projects {
     display: flex;
