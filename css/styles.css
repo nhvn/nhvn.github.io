@@ -156,11 +156,12 @@ body.night-mode #overlay {
 .social-icons {
   display: flex;
   align-items: center;
+  padding-right: 2em;
 }
 .social-icons a {
   color: inherit;
   font-size: 2em;
-  margin-right: 1em;
+  margin-right: 25px;
 }
 .social-icons a:hover,
 .hamburger-menu:hover,
@@ -170,7 +171,7 @@ body.night-mode #overlay {
 .hamburger-menu {
   display: inline-block;
   align-items: center;
-  top: 48px;
+  /* top: 48px; */
   margin-left: 2em;
 }
 i.fas.fa-bars {
