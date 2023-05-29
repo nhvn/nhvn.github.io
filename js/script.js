@@ -14,30 +14,38 @@ $(document).ready(function() {
 	const currentYear = new Date().getFullYear();
 	const prompt = $('#prompt');  // get reference to the prompt
   
-	// Check if night mode is enabled
-	const isNightModeEnabled = localStorage.getItem("nightMode") === "true";
+// Check if night mode is enabled
+function toggleNightMode() {
+	nightModeElements.forEach(element => element.toggleClass("night-mode"));
+	if (body.hasClass("night-mode")) {
+	  moonIcon.addClass("active");
+	  sunIcon.removeClass("active");
+	} else {
+	  moonIcon.removeClass("active");
+	  sunIcon.addClass("active");
+	}
+	localStorage.setItem("nightMode", body.hasClass("night-mode"));
+  }  
+
+  // Toggle night mode
+  $('.night-mode-icon').on('click', function() {
+    moonIcon.toggle();
+    sunIcon.toggle();
+    toggleNightMode();
+  });
+
+  function toggleNightMode() {
+	nightModeElements.forEach(element => element.toggleClass("night-mode"));
+	isNightModeEnabled = body.hasClass("night-mode");
 	if (isNightModeEnabled) {
-	  toggleNightMode();
+	  moonIcon.addClass("active");
+	  sunIcon.removeClass("active");
+	} else {
+	  moonIcon.removeClass("active");
+	  sunIcon.addClass("active");
 	}
-  
-	// Toggle night mode
-	$('.night-mode-icon').on('click', function() {
-	  moonIcon.toggle();
-	  sunIcon.toggle();
-	  toggleNightMode();
-	});
-  
-	function toggleNightMode() {
-	  nightModeElements.forEach(element => element.toggleClass("night-mode"));
-	  if (body.hasClass("night-mode")) {
-		moonIcon.addClass("active");
-		sunIcon.removeClass("active");
-	  } else {
-		moonIcon.removeClass("active");
-		sunIcon.addClass("active");
-	  }
-	  localStorage.setItem("nightMode", body.hasClass("night-mode"));
-	}
+	localStorage.setItem("nightMode", isNightModeEnabled);
+  }  
   
 	// Smooth scrolling
 	navLinks.on('click', function(e) {

@@ -456,8 +456,12 @@ footer a {
     margin: 27px 100px;
   }
   .social-icons {
-    display: none;
-    /* font-size: 10px; */
+    /* display: none; */
+    font-size: 15px;
+    padding-right: 2em;
+  }
+  .social-icons a {
+    margin-right: 25px;
   }
   .nav-menu {
     padding: 0 2em;
@@ -466,7 +470,7 @@ footer a {
   }
   #moonIcon,
   #sunIcon {
-    font-size: 35px;
+    font-size: 45px;
     z-index: 1;
     position: absolute;
   }
