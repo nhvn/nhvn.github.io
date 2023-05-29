@@ -12,6 +12,7 @@ $(document).ready(function() {
 	const footerText = $('footer p');
 	const nightModeElements = [body, nav, socialIcons];
 	const currentYear = new Date().getFullYear();
+	const prompt = $('#prompt');  // get reference to the prompt
   
 	// Check if night mode is enabled
 	const isNightModeEnabled = localStorage.getItem("nightMode") === "true";
@@ -78,5 +79,16 @@ $(document).ready(function() {
   
 	// Add class to trigger CSS animation
 	headName.addClass("animate");
+  
+	// Remove the prompt after 5 seconds
+	setTimeout(() => {
+		prompt.fadeOut(2500);
+	}, 4000);
+  
+	// Remove the prompt when it's clicked
+	prompt.on('click', function() {
+	  prompt.hide();
+	});
+  
   });
   
