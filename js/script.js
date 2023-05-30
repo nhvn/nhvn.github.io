@@ -88,10 +88,10 @@ function toggleNightMode() {
 	// Add class to trigger CSS animation
 	headName.addClass("animate");
   
-	// Remove the prompt after 5 seconds
+	// Remove the prompt after x seconds
 	setTimeout(() => {
-		prompt.fadeOut(2500);
-	}, 4000);
+		prompt.fadeOut(4000);
+	}, 8500);
   
 	// Remove the prompt when it's clicked
 	prompt.on('click', function() {
