@@ -247,6 +247,9 @@ ul.no-dot {
   align-items: center; 
   margin: 0 3em;
 }
+.intro {
+  font-size: 50px;
+}
 .head-name {
   max-width: 20em;
 }
