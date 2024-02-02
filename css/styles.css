@@ -249,6 +249,7 @@ ul.no-dot {
 }
 .intro {
   font-size: 50px;
+  width: 80%;
 }
 .head-name {
   max-width: 20em;
