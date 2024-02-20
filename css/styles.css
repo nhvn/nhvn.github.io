@@ -226,26 +226,23 @@ ul.no-dot {
   text-align: center;
   margin: 20px 0;
 }
-#prompt {
-  position: fixed;
-  top: 130px;
-  right: 45%;
-  transform: translate(-50%, -50%);
-  padding: 20px;
-  background-color: grey;
-  border-radius: 20px;
-  font-size: 20px;
-  z-index: 9;
-  color: #ffffff;
-}
 /* HEADER */
+
+#newPortfolio {
+  margin: 0;
+  font-size: 20px;
+  /* text-align: center; */
+  /* background-color: rgb(105, 138, 237); */
+  border-radius: 10px;
+  color: rgb(105, 138, 237);
+}
 
 #home {
   display: flex;
-  height: 100vh;
-  justify-content: center; 
-  align-items: center; 
-  margin: 0 3em;
+  /* height: 75vh; */
+  /* justify-content: center;  */
+  /* align-items: center;  */
+  margin: 0 5em;
 }
 .intro {
   font-size: 50px;
@@ -450,14 +447,8 @@ footer a {
   h2 {
     font-size: 3em;
   }
-  #prompt {
-    position: absolute;
-    top: 110px;
-    right: -80px;
-    font-size: 15px;
-  }
-  /* NAV */
 
+  /* NAV */
   .nav-right {
     margin: 27px 100px;
   }
@@ -483,14 +474,22 @@ footer a {
   /* HEADER */
 
   #home {
+    margin;
     align-items: initial;
+    margin: auto 10%;
+  }
+  .head-name.animate {
+    margin: 0 auto;
   }
   .head-name {
     margin: 1em 0;
     justify-content: center;
   }
   .head-name h1 {
-    font-size: 35px !important;
+    font-size: 25px !important;
+  }
+  .my-intro {
+    font-size: 35px;
   }
 
   /* ABOUT */
