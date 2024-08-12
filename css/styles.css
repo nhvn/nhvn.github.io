@@ -239,15 +239,16 @@ ul.no-dot {
 
 #home {
   display: flex;
-  /* height: 75vh; */
+  height: 100vh;
   /* justify-content: center;  */
   /* align-items: center;  */
   margin: 0 5em;
 }
 .intro {
-  font-size: 50px;
+  font-size: 5vw;
   width: 80%;
 }
+
 .head-name {
   max-width: 20em;
 }
@@ -474,9 +475,11 @@ footer a {
   /* HEADER */
 
   #home {
-    margin;
+    /* margin; */
     align-items: initial;
-    margin: auto 10%;
+    /* margin: auto 20%; */
+    padding-top: 15vh;
+
   }
   .head-name.animate {
     margin: 0 auto;
@@ -488,9 +491,9 @@ footer a {
   .head-name h1 {
     font-size: 25px !important;
   }
-  .my-intro {
+  /* .my-intro {
     font-size: 35px;
-  }
+  } */
 
   /* ABOUT */
   .about-me {
