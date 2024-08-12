@@ -59,7 +59,7 @@ function toggleNightMode() {
 	});
   
 	// Add current year to footer
-	footerText.text(footerText.text() + ` | ${currentYear}`);
+	// footerText.text(footerText.text() + ` | ${currentYear}`);
   
 	// Animate name
 	headName.css("opacity", 0).css("font-size", "50%");
